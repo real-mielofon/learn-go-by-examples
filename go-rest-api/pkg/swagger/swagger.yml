@@ -50,6 +50,7 @@ paths:
         - name: name
           in: path
           type: string
+          required: false
           description: The name of the Gopher to display.
       responses:
         200:
