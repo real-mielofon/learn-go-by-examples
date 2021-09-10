@@ -24,7 +24,7 @@ paths:
             enum:
             - OK
 
-  /hello/{user}:
+  /hello/:
     get:
       description: Returns a greeting to the user!
       parameters:
