@@ -39,9 +39,9 @@ func configureAPI(api *operations.HelloAPIAPI) http.Handler {
 	api.JSONProducer = runtime.JSONProducer()
 	api.TxtProducer = runtime.TextProducer()
 
-	if api.GetGopherNameHandler == nil {
-		api.GetGopherNameHandler = operations.GetGopherNameHandlerFunc(func(params operations.GetGopherNameParams) middleware.Responder {
-			return middleware.NotImplemented("operation operations.GetGopherName has not yet been implemented")
+	if api.GetGopherHandler == nil {
+		api.GetGopherHandler = operations.GetGopherHandlerFunc(func(params operations.GetGopherParams) middleware.Responder {
+			return middleware.NotImplemented("operation operations.GetGopher has not yet been implemented")
 		})
 	}
 	if api.GetHelloUserHandler == nil {

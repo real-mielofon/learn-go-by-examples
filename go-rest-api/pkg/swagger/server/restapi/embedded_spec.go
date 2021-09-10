@@ -34,7 +34,7 @@ func init() {
     "version": "0.1.0"
   },
   "paths": {
-    "/gopher/{name}": {
+    "/gopher/": {
       "get": {
         "description": "Return the Gopher Image.",
         "produces": [
@@ -45,8 +45,7 @@ func init() {
             "type": "string",
             "description": "The name of the Gopher to display.",
             "name": "name",
-            "in": "path",
-            "required": true
+            "in": "query"
           }
         ],
         "responses": {
@@ -122,7 +121,7 @@ func init() {
     "version": "0.1.0"
   },
   "paths": {
-    "/gopher/{name}": {
+    "/gopher/": {
       "get": {
         "description": "Return the Gopher Image.",
         "produces": [
@@ -133,8 +132,7 @@ func init() {
             "type": "string",
             "description": "The name of the Gopher to display.",
             "name": "name",
-            "in": "path",
-            "required": true
+            "in": "query"
           }
         ],
         "responses": {
