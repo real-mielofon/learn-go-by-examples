@@ -32,7 +32,7 @@ func main() {
 	server.Port = 8080
 	api.CheckHealthHandler = operations.CheckHealthHandlerFunc(Health)
 	api.GetHelloUserHandler = operations.GetHelloUserHandlerFunc(GetHelloUser)
-	api.GetGopherNameHandler = operations.GetGopherNameHandlerFunc(GetGopherByName)
+	api.GetGopherHandler = operations.GetGopherHandlerFunc(GetGopherByName)
 
 	// Start server with listening
 	if err := server.Serve(); err != nil {
@@ -51,7 +51,7 @@ func GetHelloUser(user operations.GetHelloUserParams) middleware.Responder {
 }
 
 // GetGopherByName return a gopher in png
-func GetGopherByName(gopher operations.GetGopherNameParams) middleware.Responder {
+func GetGopherByName(gopher operations.GetGopherParams) middleware.Responder {
 	var URL string
 	if gopher.Name != "" {
 		URL = "https://github.com/scraly/gophers/raw/main/" + gopher.Name + ".png"
