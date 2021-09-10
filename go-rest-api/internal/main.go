@@ -53,7 +53,7 @@ func GetHelloUser(user operations.GetHelloUserParams) middleware.Responder {
 // GetGopherByName return a gopher in png
 func GetGopherByName(gopher operations.GetGopherParams) middleware.Responder {
 	var URL string
-	if gopher.Name != "" {
+	if gopher.Name != nil {
 		URL = "https://github.com/scraly/gophers/raw/main/" + gopher.Name + ".png"
 	} else {
 		//by default we return dr who gopher
