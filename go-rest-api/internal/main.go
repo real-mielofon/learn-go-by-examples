@@ -64,5 +64,5 @@ func GetGopherByName(gopher operations.GetGopherParams) middleware.Responder {
 		fmt.Println("error")
 	}
 
-	return operations.NewGetGopherNameOK().WithPayload(response.Body)
+	return operations.NewGetGopherOK().WithPayload(response.Body)
 }
